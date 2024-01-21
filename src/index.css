@@ -400,6 +400,7 @@ legend {
   bottom: 10px;
   left: 10px;
   font-weight: 700;
+  text-shadow: 4px 5px 42px rgba(0, 0, 0, 0.085);
 }
 @media (min-width: 768px) {
   .image-container {
