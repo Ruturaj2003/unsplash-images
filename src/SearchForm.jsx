@@ -4,7 +4,7 @@ import { useGlobalContext } from './context';
 const SearchForm = () => {
   const [searchVal, setSearchVal] = useState('');
   const { setSearchTerm, searchTerm } = useGlobalContext();
-
+  console.log(import.meta.env.VITE_API_KEY);
   function handleSubmit(e) {
     e.preventDefault();
     if (!searchVal) return;

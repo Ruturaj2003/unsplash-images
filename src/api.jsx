@@ -1,3 +1,3 @@
-const axcsKey = 'RlNk9iUoNEMbSc8-EnQy6X4C2A2PPvJ8AZWF4CUZhhY';
+const axcsKey = import.meta.env.VITE_API_KEY;
 
 export const url = `https://api.unsplash.com/search/photos?client_id=${axcsKey}`;
