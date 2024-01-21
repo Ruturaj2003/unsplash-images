@@ -1,11 +1,15 @@
 import { useState } from 'react';
+import { useGlobalContext } from './context';
 
 const SearchForm = () => {
   const [searchVal, setSearchVal] = useState('');
+  const { setSearchTerm, searchTerm } = useGlobalContext();
+
   function handleSubmit(e) {
     e.preventDefault();
-    const data = e.target;
-    if (!data) return;
+    if (!searchVal) return;
+    setSearchTerm(searchVal);
+    console.log(searchTerm);
     setSearchVal('');
   }
   return (
@@ -13,6 +17,7 @@ const SearchForm = () => {
       <h1 style={{ textAlign: 'center' }}>UnSplash Images</h1>
       <form className="search-form">
         <input
+          id="subval"
           type="text"
           name="search"
           placeholder="car"
