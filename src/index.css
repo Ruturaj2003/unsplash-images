@@ -391,9 +391,16 @@ Gallery
 }
 
 .image-container .img {
+  border-radius: 12px;
+  box-shadow: 10px 10px 5px -5px var(--red-light);
   height: 10rem;
 }
-
+legend {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-weight: 700;
+}
 @media (min-width: 768px) {
   .image-container {
     grid-template-columns: 1fr 1fr;
@@ -403,4 +410,7 @@ Gallery
   .image-container {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+.darkcont img {
+  box-shadow: 10px 10px 5px -5px rgba(255, 120, 255, 1) !important;
 }

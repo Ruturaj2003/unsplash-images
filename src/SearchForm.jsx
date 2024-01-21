@@ -5,7 +5,7 @@ const SearchForm = () => {
   function handleSubmit(e) {
     e.preventDefault();
     const data = e.target;
-    console.log(searchVal);
+    if (!data) return;
     setSearchVal('');
   }
   return (
@@ -24,7 +24,6 @@ const SearchForm = () => {
           Submit
         </button>
       </form>
-      );
     </section>
   );
 };
