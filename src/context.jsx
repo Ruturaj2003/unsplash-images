@@ -11,6 +11,8 @@ export const AppProvider = ({ children }) => {
     setIsDarkTheme(newDarkTheme);
     const body = document.querySelector('body');
     body.classList.toggle('dark-theme', newDarkTheme);
+    const btn = document.querySelector('.btn');
+    btn.classList.toggle('darkbtn');
   };
   return (
     <AppContext.Provider value={{ isDarkTheme, toggleDarkTheme }}>

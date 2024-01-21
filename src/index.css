@@ -65,6 +65,7 @@ html {
   --darkTextColor: wheat;
   --lightBackgroundColor: #43766c;
   --lightTextColor: #f8fae5;
+  --darkTransition: color 0.3s ease-in-out, background-color 0.5s ease-in-out;
 }
 .dark-theme {
   background-color: var(--darkBackgroundColor);
@@ -74,13 +75,16 @@ html {
 .dota {
   color: wheat;
   font-size: 2rem;
+  transition: all 0.8s ease-in-out;
 }
 .dota-moon {
   color: var(--lightTextColor);
   font-size: 1.6rem;
+  transition: all 0.8s ease-in-out;
 }
 
 body {
+  transition: var(--darkTransition);
   background: var(--lightBackgroundColor);
   color: var(--lightTextColor);
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -345,15 +349,28 @@ Search Form
 .search-input {
   border-color: var(--grey-300);
   transition: var(--darkModeTransition);
-  color: var(--textColor);
+  color: var(--lightBackgroundColor);
   border-radius: 0;
-
+  font-weight: 800;
+  padding: 4px;
+  padding-left: 2rem;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   /* border-right: none; */
 }
 
 .search-form .btn {
-  border-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: var(--lightTextColor);
+  color: var(--lightBackgroundColor);
 }
+
+.darkbtn {
+  background-color: var(--darkTextColor) !important;
+  color: var(--darkBackgroundColor) !important;
+}
+
 .search-form .btn:hover {
   background: var(--primary-300);
   color: var(--black);
